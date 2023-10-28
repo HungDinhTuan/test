@@ -1,32 +1,40 @@
-public class LineItem extends Product {
-    private int quatity;
+public class LineItem {
+    private Product product;
+    private int quantity;
 
     public LineItem() {
-
     }
 
-    public LineItem(long sku, String name, String category, Double price, int quantity, int quatity) {
-        super(sku, name, category, price, quantity);
-        this.quatity = quatity;
+    public LineItem(Product product, int quantity) {
+        this.product = product;
+        this.quantity = quantity;
     }
 
-    public int getQuatity() {
-        return quatity;
+    public Product getProduct() {
+        return product;
     }
 
-    public void setQuatity(int quatity) {
-        this.quatity = quatity;
+    public void setProduct(Product product) {
+        this.product = product;
     }
 
-    // method cost()
-    public Double cost(){
-        return getPrice() * quatity;
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public double cost(){
+        return product.getPrice() * quantity;
     }
 
     @Override
     public String toString() {
-        return "Lineltem{" +
-                "quatity=" + quatity +
+        return "LineItem{" +
+                "product=" + product +
+                ", quantity=" + quantity +
                 '}';
     }
 }

@@ -1,27 +1,27 @@
 // ĐINH TUẤN HÙNG -- TH2210025
 public class Product {
-    private long sku;
+    private String sku;
     private String name;
     private String category;
-    private Double price;
-    private int quantityProduct;
+    private double price;
+    private int quanity;
 
     public Product() {
     }
 
-    public Product(long sku, String name, String category, Double price, int quantity) {
+    public Product(String sku, String name, String category, double price, int quanity) {
         this.sku = sku;
         this.name = name;
         this.category = category;
         this.price = price;
-        this.quantityProduct = quantity;
+        this.quanity = quanity;
     }
 
-    public long getSku() {
+    public String getSku() {
         return sku;
     }
 
-    public void setSku(long sku) {
+    public void setSku(String sku) {
         this.sku = sku;
     }
 
@@ -41,30 +41,30 @@ public class Product {
         this.category = category;
     }
 
-    public Double getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
-    public int getQuantityProduct() {
-        return quantityProduct;
+    public int getQuanity() {
+        return quanity;
     }
 
-    public void setQuantityProduct(int quantityProduct) {
-        this.quantityProduct = quantityProduct;
+    public void setQuanity(int quanity) {
+        this.quanity = quanity;
     }
 
     @Override
     public String toString() {
         return "Product{" +
-                "sku=" + sku +
+                "sku='" + sku + '\'' +
                 ", name='" + name + '\'' +
                 ", category='" + category + '\'' +
                 ", price=" + price +
-                ", quantity=" + quantityProduct +
+                ", quanity=" + quanity +
                 '}';
     }
 }
